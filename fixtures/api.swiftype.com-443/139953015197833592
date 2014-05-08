@@ -1,0 +1,20 @@
+GET /api/v1/engines/my-engine/document_types.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+
+200 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Thu, 08 May 2014 06:22:32 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+vary: Accept-Encoding
+status: 200 OK
+x-ua-compatible: IE=Edge,chrome=1
+etag: "29d6f3c4c53e833b9b2efb29e9ca9f3f"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTQ2NTc5Mjk3YmU3YmYwODkyYTE0M2Y2MzE0NTg3ODk5BjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVKPx7MUzIqThgAAHzA%3D--9f3c769903ca1a58cace4ed61afb3d06e4b619db; path=/; HttpOnly; secure
+x-request-id: a6ebd09429d84de422ce380e71b63fc9
+x-runtime: 0.041531
+
+[{"id":"536b20df14cc8a3124000004","name":"books","slug":"books","engine_id":"536b20df14cc8a3124000002","updated_at":"2014-05-08T06:14:57Z","document_count":1,"field_mapping":{"external_id":"enum","updated_at":"date","title":"string","url":"enum","sections":"string","body":"text","type":"enum","image":"enum","published_at":"date","popularity":"integer","info":"string"}}]

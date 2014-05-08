@@ -1,0 +1,18 @@
+{
+  "name": "swiftype",
+  "version": "0.0.0",
+  "description": "Swiftype API client",
+  "main": "swiftype.js",
+  "author": "Mike Chlipala",
+  "license": "MIT",
+  "dependencies": {
+    "request": "~2.34.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.0",
+    "replay": "~1.10.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

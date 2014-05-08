@@ -1,0 +1,20 @@
+GET /api/v1/engines.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+
+200 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Thu, 08 May 2014 06:15:50 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+vary: Accept-Encoding
+status: 200 OK
+x-ua-compatible: IE=Edge,chrome=1
+etag: "f86462913d9ec1e719eaf3c20c8b8e4a"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWMwZGE5YjJmMjg2ZjgzZGQ3YzlkYTFhMjZiN2M4YzU1BjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVKPx7MUzIqThgAAHzA%3D--e25725e05d6aaa98e1e199d9bead3adbc7c2d3db; path=/; HttpOnly; secure
+x-request-id: a88d6461a33e475214b75783b813199d
+x-runtime: 0.028198
+
+[{"name":"My Engine","slug":"my-engine","key":"td5xfqgcY4ypXnaXjdck","id":"536b20df14cc8a3124000002","_id":"536b20df14cc8a3124000002","updated_at":"2014-05-08T06:14:57Z","document_count":1}]

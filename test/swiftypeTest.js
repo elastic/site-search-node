@@ -25,10 +25,10 @@ describe('swiftype', function() {
     })
 
     it('gets an engine', function(done) {
-      var slug = 'my-engine'
-      client.engines.get(slug, function(err, res) {
+      var engine = 'my-engine'
+      client.engines.get({engine: engine}, function(err, res) {
         assert(res)
-        assert.equal(slug, res.slug)
+        assert.equal(engine, res.slug)
         done()
       })
     })
@@ -40,18 +40,32 @@ describe('swiftype', function() {
         engine = 'my-engine'
 
     it('gets the document types for an engine', function(done) {
-      client.documentTypes.getAll(engine, function(err, res) {
+      client.documentTypes.getAll({engine: engine}, function(err, res) {
         assert(res)
         assert.equal(1, res.length)
         done()
       })
     })
 
-    it('gets the document ', function(done) {
-      var slug = 'books'
-      client.documentTypes.get(engine, slug, function(err, res) {
+    it('gets the document type', function(done) {
+      var documentType = 'books'
+      client.documentTypes.get({engine: engine, documentType: documentType}, function(err, res) {
         assert(res)
-        assert.equal(slug, res.slug)
+        assert.equal(documentType, res.slug)
+        done()
+      })
+    })
+  })
+
+  describe('search', function() {
+    var apiKey = 'a-test-api-key',
+      client = new Swiftype({apiKey: apiKey}),
+      engine = 'my-engine'
+
+    it('searches an engine', function(done) {
+      client.search({engine: engine, q: 'awesome'}, function(err, res) {
+        assert(res)
+        assert.equal("Awesome Site", res.records.page[0].title)
         done()
       })
     })

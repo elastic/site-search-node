@@ -8,20 +8,24 @@ var client = new Swiftype({
   apiKey: 'a-test-api-key'
 })
 
-client.engines.getAll(function(err, response) {
-  console.log(response)
+client.search({engine: 'my-engine', q: 'awesome'}, function(err, res) {
+  console.log(res)
 })
 
-client.engines.get('my-engine', function(err, response) {
-  console.log(response)
+client.engines.getAll(function(err, res) {
+  console.log(res)
 })
 
-client.documentTypes.getAll('my-engine', function(err, response) {
-  console.log(response)
+client.engines.get({engine: 'my-engine'}, function(err, res) {
+  console.log(res)
 })
 
-client.documentTypes.getAll('my-engine', 'books', function(err, response) {
-  console.log(response)
+client.documentTypes.getAll({engine: 'my-engine'}, function(err, res) {
+  console.log(res)
+})
+
+client.documentTypes.get({enigne: 'my-engine', documentType: 'books'}, function(err, res) {
+  console.log(res)
 })
 ```
 

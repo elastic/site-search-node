@@ -24,7 +24,7 @@ client.documentTypes.getAll({engine: 'my-engine'}, function(err, res) {
   console.log(res)
 })
 
-client.documentTypes.get({enigne: 'my-engine', documentType: 'books'}, function(err, res) {
+client.documentTypes.get({engine: 'my-engine', documentType: 'books'}, function(err, res) {
   console.log(res)
 })
 ```

@@ -1,4 +1,4 @@
-GET /api/v1/engines/my-engine/document_types.json
+GET /api/v1/engines/bookstore/document_types.json
 host: api.swiftype.com
 authorization: Basic YS10ZXN0LWFwaS1rZXk=
 

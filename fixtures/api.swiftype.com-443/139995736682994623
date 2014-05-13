@@ -1,0 +1,20 @@
+GET /api/v1/engines/bookstore/document_types/books/documents.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+
+200 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Tue, 13 May 2014 05:02:46 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+vary: Accept-Encoding
+status: 200 OK
+x-ua-compatible: IE=Edge,chrome=1
+etag: "13c9104a78b5da07ac1e4cfebd0aa1d8"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWUzNTRmOTUxYjNlZWFkOWFmMWI1YmJlZGQxODYyNmI5BjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVKPx7MUzIqThgAAHzA%3D--7e5c157ba237ea4220290c8ad20452d449593a57; path=/; HttpOnly; secure
+x-request-id: 0c06e1fd791a53d6518a935c17923458
+x-runtime: 0.035841
+
+[{"external_id":"1","engine_id":"53719e38c9f929858f0002ae","document_type_id":"5371a057eaa0b2f2e6000708","id":"5371a475c9f929066800070b","_id":"5371a475c9f929066800070b","updated_at":"2014-05-13T04:49:57Z","title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"fiction"}]

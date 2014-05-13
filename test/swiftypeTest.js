@@ -1,6 +1,6 @@
 var assert = require('assert'),
     Swiftype = require('../lib/swiftype'),
-    replay = require("replay")
+    replay = require('replay')
 
 describe('swiftype', function() {
   describe('config', function() {
@@ -98,9 +98,9 @@ describe('swiftype', function() {
       var document = {
         external_id: '1',
         fields: [
-          { name: "title", value: "The Great Gatsby", type: "string" },
-          { name: "author", value: "F. Scott Fitzgerald", type: "string" },
-          { name: "genre", value: "fiction", type: "enum" }
+          { name: 'title', value: 'The Great Gatsby', type: 'string' },
+          { name: 'author', value: 'F. Scott Fitzgerald', type: 'string' },
+          { name: 'genre', value: 'fiction', type: 'enum' }
         ]
       }
 
@@ -134,6 +134,21 @@ describe('swiftype', function() {
       }, function(err, res) {
         assert(res)
         assert.equal(1, res.length)
+        done()
+      })
+    })
+
+    it('updates a document', function(done) {
+      var field = { title: 'This Side of Paradise' }
+
+      client.documents.update({
+        engine: engine,
+        documentType: documentType,
+        externalId: '1',
+        fields: field
+      }, function(err, res) {
+        assert(res)
+        assert.equal(field.title, res.title)
         done()
       })
     })

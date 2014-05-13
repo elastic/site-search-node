@@ -1,0 +1,23 @@
+PUT /api/v1/engines/bookstore/document_types/books/documents/1/update_fields.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+accept: application/json
+content-type: application/json
+body: {\"fields\":{\"title\":\"This Side of Paradise\"}}
+
+200 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Tue, 13 May 2014 16:11:35 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+vary: Accept-Encoding
+status: 200 OK
+x-ua-compatible: IE=Edge,chrome=1
+etag: "d418d8360af3bbb7a3345d2c34c45235"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWU1ZGRlNTZiNWUwNjZmOGU2MzY5ZmEwMGQzYTQ1YjFiBjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVKPx7MUzIqThgAAHzA%3D--218ef15a925578d738076776b51a599bbe99d24e; path=/; HttpOnly; secure
+x-request-id: 26ce78b762b579fb6cc6ee997b306404
+x-runtime: 0.103885
+
+{"external_id":"1","engine_id":"53719e38c9f929858f0002ae","document_type_id":"5371a057eaa0b2f2e6000708","id":"5371a475c9f929066800070b","_id":"5371a475c9f929066800070b","updated_at":"2014-05-13T16:11:35Z","title":"This Side of Paradise","author":"F. Scott Fitzgerald","genre":"fiction"}

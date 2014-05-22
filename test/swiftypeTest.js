@@ -152,6 +152,17 @@ describe('swiftype', function() {
         done()
       })
     })
+
+    it('destroys a document', function(done) {
+      client.documents.destroy({
+        engine: engine,
+        documentType: documentType,
+        externalId: '1'
+      }, function(err, res) {
+        assert.equal(res.statusCode, 204)
+        done()
+      })
+    })
   })
 
   describe('search', function() {

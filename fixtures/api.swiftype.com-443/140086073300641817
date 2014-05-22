@@ -1,0 +1,14 @@
+DELETE /api/v1/engines/bookstore/document_types/books/documents/1
+accept: */*
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+
+204 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Fri, 23 May 2014 15:58:53 GMT
+connection: 'keep-alive'
+'x-ua-compatible': 'IE=Edge,chrome=1'
+'cache-control': 'no-cache'
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWE5NDFlZjEzZWZhY2U3NTlhOWUxNWViOGRmNTY3YTllBjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVKPx7MUzIqThgAAHzA%3D--f9b5524480abe35cd348de297d8e86f39204ad13; path=/; HttpOnly; secure
+'x-request-id': '42c8c9d97abd39b433b177cc4c3423e3'
+'x-runtime': '0.352742'

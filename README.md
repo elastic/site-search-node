@@ -1,5 +1,7 @@
 # Node.js client for the Swiftype API
 
+[![Build Status](https://travis-ci.org/swiftype/swiftype-node.svg?branch=master)](https://travis-ci.org/swiftype/swiftype-node)
+
 ## Usage
 
 ``` javascript

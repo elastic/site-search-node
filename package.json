@@ -2,9 +2,17 @@
   "name": "swiftype",
   "version": "0.0.0",
   "description": "Swiftype API client",
-  "main": "swiftype.js",
+  "homepage": "https://github.com/swiftype/swiftype-node",
+  "main": "lib/swiftype.js",
   "author": "Mike Chlipala",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:swiftype/swiftype-node.git"
+  },
+  "engines": {
+    "node": ">= v0.8.0"
+  },
   "dependencies": {
     "request": "~2.34.0"
   },

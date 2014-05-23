@@ -1,6 +1,6 @@
 {
   "name": "swiftype",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Swiftype API client",
   "homepage": "https://github.com/swiftype/swiftype-node",
   "main": "lib/swiftype.js",

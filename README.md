@@ -60,7 +60,7 @@ Create a new document:
 
 Fetch all of your engines:
 
-    swiftype.engines.getAll(function(err, res) {
+    swiftype.engines.list(function(err, res) {
       console.log(res)
     })
 
@@ -76,7 +76,7 @@ Fetch a single engine:
 
 Fetch all of the document types in the engine `my-engine`
 
-    swiftype.documentTypes.getAll({
+    swiftype.documentTypes.list({
       engine: 'my-engine'
     }, function(err, res) {
       console.log(res)

@@ -59,7 +59,7 @@ describe('documents', function() {
   })
 
   it('gets all the documents', function(done) {
-    client.documents.getAll({
+    client.documents.list({
       engine: engine,
       documentType: documentType
     }, function(err, res) {

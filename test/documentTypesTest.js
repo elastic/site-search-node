@@ -8,7 +8,7 @@ describe('documentTypes', function() {
       engine = 'bookstore'
 
   it('gets the document types for an engine', function(done) {
-    client.documentTypes.getAll({engine: engine}, function(err, res) {
+    client.documentTypes.list({engine: engine}, function(err, res) {
       assert(res)
       assert.equal(1, res.length)
       done()

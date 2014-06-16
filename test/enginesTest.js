@@ -7,7 +7,7 @@ describe('engines', function() {
       client = new Swiftype({ apiKey: apiKey })
 
   it('gets the engines', function(done) {
-    client.engines.getAll(function(err, res) {
+    client.engines.list(function(err, res) {
       assert(res)
       assert.equal(1, res.length)
       done()

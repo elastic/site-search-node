@@ -94,4 +94,16 @@ describe('documents', function() {
       done()
     })
   })
+
+  it('destroys multiple documents', function(done) {
+    client.documents.bulkDestroy({
+      engine: engine,
+      documentType: documentType,
+      documents: [ '3', '4' ]
+    }, function(err, res) {
+      assert(res)
+      assert.equal(2, res.length)
+      done()
+    })
+  })
 })

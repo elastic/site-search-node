@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/swiftype/swiftype-node.svg?branch=master)](https://travis-ci.org/swiftype/swiftype-node)
 
-NOTE: This module is still a work in progress. Basic API operations are currently supported, and we should be adding full API support shortly. Patches are welcome in the mean time!
-
 ## Installation
 
 With npm:

@@ -1,0 +1,20 @@
+GET /api/v1/engines/swiftype-api-example/document_types/videos/analytics/clicks.json?start_date=2014-06-12&end_date=2014-06-18
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+
+200 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Wed, 18 Jun 2014 17:44:37 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+vary: Accept-Encoding
+status: 200 OK
+x-ua-compatible: IE=Edge,chrome=1
+etag: "924f31f35408a33276a7fbc47756365f"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTQyOWY5M2RjNGQwMDI3NDA2YmE0NzZiZTIyN2Y5YTNjBjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVJfLxHqoLI%2BqgAAAjA%3D--0a1b418a375fb94557f87a25f48433c2d9a8f559; path=/; HttpOnly; secure
+x-request-id: 841b57698dc94d772ff4f5ff747b7f38
+x-runtime: 0.038128
+
+[["2014-06-18",0],["2014-06-17",1],["2014-06-16",0],["2014-06-15",0],["2014-06-14",0],["2014-06-13",0],["2014-06-12",0]]

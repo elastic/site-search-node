@@ -1,0 +1,20 @@
+GET /api/v1/engines/swiftype-api-example/analytics/searches.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk=
+
+200 HTTP/1.1
+server: openresty/1.5.11.1rc1
+date: Wed, 18 Jun 2014 17:25:03 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+vary: Accept-Encoding
+status: 200 OK
+x-ua-compatible: IE=Edge,chrome=1
+etag: "acf2e5cf6d8c21b832e6b8878d6e28e9"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWUxM2U3ODQ0Y2ZjYzllNDAyOTJhNDc1MmIxNzNhMzY1BjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVJfLxHqoLI%2BqgAAAjA%3D--af89e0bc8df242c2968a08781c1e424e73a12662; path=/; HttpOnly; secure
+x-request-id: f4e509cf5b272914ec9672ecbb613abb
+x-runtime: 0.075134
+
+[["2014-06-18",0],["2014-06-17",32],["2014-06-16",2],["2014-06-15",0],["2014-06-14",0],["2014-06-13",0],["2014-06-12",2],["2014-06-11",0],["2014-06-10",11],["2014-06-09",1],["2014-06-08",0],["2014-06-07",0],["2014-06-06",0],["2014-06-05",5],["2014-06-04",1]]

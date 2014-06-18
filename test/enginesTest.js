@@ -31,4 +31,15 @@ describe('engines', function() {
       done()
     })
   })
+
+  it('destroys an engine', function(done) {
+    var engine = 'bookstore'
+    client.engines.destroy({
+      engine: engine
+    }, function(err, res) {
+      assert(res)
+      assert.equal(204, res.statusCode)
+      done()
+    })
+  })
 })

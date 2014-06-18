@@ -45,4 +45,16 @@ describe('documentTypes', function() {
       done()
     })
   })
+
+  it('destroys a document type', function(done) {
+    var documentType = 'books'
+    client.documentTypes.destroy({
+      engine: engine,
+      documentType: documentType
+    }, function(err, res) {
+      assert(res)
+      assert.equal(204, res.statusCode)
+      done()
+    })
+  })
 })

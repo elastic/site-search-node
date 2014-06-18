@@ -13,7 +13,6 @@ status: 200 OK
 x-ua-compatible: IE=Edge,chrome=1
 etag: "fe92ecf6ed57f50df80b1ae0d0de74ae"
 cache-control: max-age=0, private, must-revalidate
-set-cookie: _st_main_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTRiMjVmNzI4NWQxOTcwZTIxOTE5NmZiYTNlMDZmYzU3BjsAVEkiGXdhcmRlbi51c2VyLnJvbGUua2V5BjsAVFsHWwZVOhpNb3BlZDo6QlNPTjo6T2JqZWN0SWQiEVJfLxHqoLI%2BqgAAAjA%3D--ac5475ae58832a82a9bc1eedb9b18be0bc5b012a; path=/; HttpOnly; secure
 x-request-id: 73f6e3955db8b6ed7527f4f48fdf50e8
 x-runtime: 0.033432
 

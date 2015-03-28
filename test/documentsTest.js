@@ -46,6 +46,41 @@ describe('documents', function() {
     })
   })
 
+  it('creates multiple documents in batches', function(done) {
+    // node-replay doesn't nicely support mulitple requests to the same url
+    // because it exports a singleton, so mutations in one test might affect other tests, so
+    // this test just checks that you've correctly delegated to the documents.bulkCreate
+    // https://github.com/assaf/node-replay/issues/52
+    var documents = [
+      {external_id: '3', fields: [ { name: 'title', value: 'A Great Book', type: 'string' } ]},
+      {external_id: '4', fields: [ { name: 'title', value: 'Another Great Book', type: 'string' } ]},
+    ]
+
+    var batchSize = 1
+
+    var passedOptions = []
+
+    var _bulkCreate = client.documents.bulkCreate
+    client.documents.bulkCreate = function(options, callback){
+      assert.equal(batchSize, options.documents.length)
+      passedOptions.push(options)
+      callback(null, {})
+    }
+
+    var options = {
+      engine: engine,
+      documentType: documentType,
+    }
+
+    var batchSize = 1
+
+    client.documents.batchCreate(options, documents, batchSize, function(err, res) {
+      assert.equal(2, passedOptions.length)
+      client.documents.bulkCreate = _bulkCreate
+      done()
+    })
+  })
+
   it('gets a document', function(done) {
     client.documents.get({
       engine: engine,

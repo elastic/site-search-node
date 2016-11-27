@@ -1,0 +1,25 @@
+POST /api/v1/engines.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+accept: application/json
+content-type: application/json
+body: {\"engine\":{\"name\":\"bookstore\"}}
+
+HTTP/1.1 400 Bad Request
+server: openresty/1.7.10.2
+date: Sun, 27 Nov 2016 05:58:43 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+status: 400 Bad Request
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+cache-control: no-cache
+x-request-id: edda4872-ec61-4463-872c-eb3b243bdb77
+x-runtime: 0.091996
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web02.dal05
+x-swiftype-edge-node: web02.dal05
+
+{"error":"Invalid record. \nmessage:\n  Validation of Engine failed.\nsummary:\n  The following errors were found: Name is already taken\nresolution:\n  Try persisting the document with valid data or remove the validations."}

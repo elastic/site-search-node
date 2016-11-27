@@ -1,0 +1,24 @@
+GET /api/v1/engines/bookstore/document_types/books.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Sun, 27 Nov 2016 05:45:37 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"15949b69736ecfc0dc5ab44e7d1529ec"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: e1368ec0-88d0-42a7-abe5-4b66cec403b3
+x-runtime: 0.044837
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+
+{"id":"583a722e400361475a7b15fd","name":"books","slug":"books","engine_id":"583a722e400361475a7b15fe","updated_at":"2016-11-27T05:42:06Z","document_count":0,"field_mapping":{}}

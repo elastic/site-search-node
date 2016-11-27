@@ -1,0 +1,27 @@
+POST /api/v1/engines/bookstore/document_types.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+accept: application/json
+content-type: application/json
+body: {\"document_type\":{\"name\":\"magazines\"}}
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Sun, 27 Nov 2016 05:58:23 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"44ad83f6679b281087094e69a653cdc7"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 8c3837db-a46c-4848-92af-16632414123b
+x-runtime: 0.174526
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+
+{"id":"583a75ffc9f9296aa649fa7a","name":"magazines","slug":"magazines","engine_id":"583a73eb4003611f907b16ba","updated_at":"2016-11-27T05:58:23Z","document_count":0,"field_mapping":{}}

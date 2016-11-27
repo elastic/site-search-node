@@ -34,6 +34,17 @@ Search for `cats` on the engine `my-engine`:
       console.log(res)
     })
 
+### Autocomplete
+
+Autocomplete for `cat` on the engine `my-engine`:
+
+    swiftype.suggest({
+      engine: 'my-engine',
+      q: 'cat'
+    }, function(err, res) {
+      console.log(res)
+    })
+
 ### Documents
 
 Create a new document:
@@ -83,7 +94,7 @@ Fetch all of the document types in the engine `my-engine`
 Fetch the document type `books` in the engine `my-engine`
 
     swiftype.documentTypes.get({
-      engine: 'my-engine', 
+      engine: 'my-engine',
       documentType: 'books'
     }, function(err, res) {
       console.log(res)
@@ -96,3 +107,9 @@ Check out the tests for more examples!
     $ npm test
 
 The tests use stubbed HTTP interactions that are recorded with the [node-replay](https://github.com/assaf/node-replay) module. By default, HTTP interactions are not allowed when running the tests.
+
+The tests can also use environment variables so that you can create new replays against your own account. Don't forget to change the "authorization" header in the replay files to not give away your api key.
+
+* SWIFTYPE_TEST_MY_ENGINE = the slug for your 'my-engine' in the tests
+* SWIFTYPE_TEST_BOOKSTORE_ENGINE = the slug for your 'bookstore' in the tests
+* SWIFTYPE_TEST_API_KEY = your api key in the tests

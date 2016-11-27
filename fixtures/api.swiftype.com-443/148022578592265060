@@ -1,0 +1,24 @@
+GET /api/v1/engines/bookstore/document_types/books/documents/1.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Sun, 27 Nov 2016 05:49:48 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"836b6a9fadcb4ca321f69679bb03c8d5"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 3d0db25f-5a7b-41da-aa64-f726a561e13f
+x-runtime: 0.039003
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web02.dal05
+x-swiftype-edge-node: web02.dal05
+
+{"external_id":"1","engine_id":"583a73eb4003611f907b16ba","document_type_id":"583a73eb4003611f907b16b9","id":"583a73fa8db2313925a9718a","updated_at":"2016-11-27T05:49:46+00:00","title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"fiction"}

@@ -1,0 +1,20 @@
+DELETE /api/v1/engines/bookstore/document_types/books
+accept: */*
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 204 No Content
+server: openresty/1.7.10.2
+date: Sun, 27 Nov 2016 05:45:40 GMT
+connection: close
+status: 204 No Content
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+cache-control: no-cache
+x-request-id: 1dc964dc-4396-4273-8bde-47f07d0f1e7e
+x-runtime: 0.108409
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+

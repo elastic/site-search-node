@@ -2,26 +2,29 @@ var assert = require('assert'),
     Swiftype = require('../lib/swiftype'),
     replay = require('replay')
 
+// Engines and keys
+var myEngine = process.env.SWIFTYPE_TEST_MY_ENGINE || 'my-engine',
+    bookstoreEngine = process.env.SWIFTYPE_TEST_BOOKSTORE_ENGINE || 'bookstore',
+    apiKey = process.env.SWIFTYPE_TEST_API_KEY || 'a-test-api-key'
+
 describe('analytics', function() {
-  var apiKey = 'a-test-api-key',
-      client = new Swiftype({ apiKey: apiKey }),
-      engine = 'swiftype-api-example',
+  var client = new Swiftype({ apiKey: apiKey }),
       documentType = 'videos'
 
   it('gets engine-wide analytics', function(done) {
     client.analytics.searches({
-      engine: engine
+      engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2014-06-18', 0], res[0])
+      assert.deepEqual(['2016-11-27', 0], res[0])
       done()
     })
   })
 
   it('gets engine-wide analytics for a time range', function(done) {
     client.analytics.searches({
-      engine: engine,
+      engine: bookstoreEngine,
       start_date: '2014-06-12',
       end_date: '2014-06-18'
     }, function(err, res) {
@@ -34,11 +37,11 @@ describe('analytics', function() {
 
   it('gets document-type analytics', function(done) {
     client.analytics.searches({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType
     }, function(err, res) {
       assert(res)
-      assert.deepEqual(['2014-06-18', 0], res[0])
+      assert.deepEqual(['2016-11-27', 0], res[0])
       assert.equal(15, res.length)
       done()
     })
@@ -46,7 +49,7 @@ describe('analytics', function() {
 
   it('gets document type analytics for a time range', function(done) {
     client.analytics.searches({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       start_date: '2014-06-12',
       end_date: '2014-06-18'
@@ -60,18 +63,18 @@ describe('analytics', function() {
 
   it('gets engine-wide autoselects for the default time range', function(done) {
     client.analytics.autoselects({
-      engine: engine
+      engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2014-06-18', 0], res[0])
+      assert.deepEqual(['2016-11-27', 0], res[0])
       done()
     })
   })
 
   it('gets engine-wide autoselects for a time range', function(done) {
     client.analytics.autoselects({
-      engine: engine,
+      engine: bookstoreEngine,
       start_date: '2014-06-12',
       end_date: '2014-06-18'
     }, function(err, res) {
@@ -84,19 +87,19 @@ describe('analytics', function() {
 
   it('gets document type autoselects for the default time range', function(done) {
     client.analytics.autoselects({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2014-06-18', 0], res[0])
+      assert.deepEqual(['2016-11-27', 0], res[0])
       done()
     })
   })
 
   it('gets document type autoselects for a time range', function(done) {
     client.analytics.autoselects({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       start_date: '2014-06-12',
       end_date: '2014-06-18'
@@ -110,18 +113,18 @@ describe('analytics', function() {
 
   it('gets engine-wide clicks for the default time range', function(done) {
     client.analytics.clicks({
-      engine: engine
+      engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2014-06-18', 0], res[0])
+      assert.deepEqual(['2016-11-27', 0], res[0])
       done()
     })
   })
 
   it('gets engine-wide clicks for a time range', function(done) {
     client.analytics.clicks({
-      engine: engine,
+      engine: bookstoreEngine,
       start_date: '2014-06-12',
       end_date: '2014-06-18'
     }, function(err, res) {
@@ -134,19 +137,19 @@ describe('analytics', function() {
 
   it('gets document type clicks for the default time range', function(done) {
     client.analytics.clicks({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2014-06-18', 0], res[0])
+      assert.deepEqual(['2016-11-27', 0], res[0])
       done()
     })
   })
 
   it('gets document type clicks for a time range', function(done) {
     client.analytics.clicks({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       start_date: '2014-06-12',
       end_date: '2014-06-18'
@@ -160,22 +163,20 @@ describe('analytics', function() {
 
   it('gets top queries', function(done) {
     client.analytics.topQueries({
-      engine: engine
+      engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
-      assert.equal(20, res.length)
-      assert.deepEqual(['cat', 22], res[0])
+      assert.equal(0, res.length)
       done()
     })
   })
 
   it('gets top no result queries', function(done) {
     client.analytics.topNoResultQueries({
-      engine: engine
+      engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
-      assert.equal(13, res.length)
-      assert.deepEqual(['river', 12], res[0])
+      assert.equal(0, res.length)
       done()
     })
   })

@@ -2,9 +2,10 @@ var assert = require('assert'),
     Swiftype = require('../lib/swiftype'),
     replay = require('replay')
 
-// Engines and keys
+// Engines and keys fixtures
 var myEngine = process.env.SWIFTYPE_TEST_MY_ENGINE || 'my-engine',
     bookstoreEngine = process.env.SWIFTYPE_TEST_BOOKSTORE_ENGINE || 'bookstore',
+    temporaryEngine = process.env.SWIFTYPE_TEST_TEMPORARY_ENGINE || 'temporary',
     apiKey = process.env.SWIFTYPE_TEST_API_KEY || 'a-test-api-key'
 
 describe('analytics', function() {
@@ -17,7 +18,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-27', 0], res[0])
+      assert.deepEqual(['2016-11-28', 0], res[0])
       done()
     })
   })
@@ -41,7 +42,7 @@ describe('analytics', function() {
       documentType: documentType
     }, function(err, res) {
       assert(res)
-      assert.deepEqual(['2016-11-27', 0], res[0])
+      assert.deepEqual(['2016-11-28', 0], res[0])
       assert.equal(15, res.length)
       done()
     })
@@ -67,7 +68,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-27', 0], res[0])
+      assert.deepEqual(['2016-11-28', 0], res[0])
       done()
     })
   })
@@ -92,7 +93,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-27', 0], res[0])
+      assert.deepEqual(['2016-11-28', 0], res[0])
       done()
     })
   })
@@ -117,7 +118,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-27', 0], res[0])
+      assert.deepEqual(['2016-11-28', 0], res[0])
       done()
     })
   })
@@ -142,7 +143,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-27', 0], res[0])
+      assert.deepEqual(['2016-11-28', 0], res[0])
       done()
     })
   })

@@ -2,9 +2,10 @@ var assert = require('assert'),
     Swiftype = require('../lib/swiftype'),
     replay = require('replay')
 
-// Engines and keys
+// Engines and keys fixtures
 var myEngine = process.env.SWIFTYPE_TEST_MY_ENGINE || 'my-engine',
     bookstoreEngine = process.env.SWIFTYPE_TEST_BOOKSTORE_ENGINE || 'bookstore',
+    temporaryEngine = process.env.SWIFTYPE_TEST_TEMPORARY_ENGINE || 'temporary',
     apiKey = process.env.SWIFTYPE_TEST_API_KEY || 'a-test-api-key'
 
 describe('engines', function() {
@@ -28,7 +29,7 @@ describe('engines', function() {
   })
 
   it('creates an engine', function(done) {
-    var engine = { name: 'temporary' }
+    var engine = { name: temporaryEngine }
     client.engines.create({engine: engine}, function(err, res) {
       assert(res)
       assert.equal(engine.name, res.name)
@@ -38,7 +39,7 @@ describe('engines', function() {
 
   it('destroys an engine', function(done) {
     client.engines.destroy({
-      engine: bookstoreEngine
+      engine: temporaryEngine
     }, function(err, res) {
       assert(res)
       assert.equal(204, res.statusCode)

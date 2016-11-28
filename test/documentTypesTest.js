@@ -2,9 +2,10 @@ var assert = require('assert'),
     Swiftype = require('../lib/swiftype'),
     replay = require('replay')
 
-// Engines and keys
+// Engines and keys fixtures
 var myEngine = process.env.SWIFTYPE_TEST_MY_ENGINE || 'my-engine',
     bookstoreEngine = process.env.SWIFTYPE_TEST_BOOKSTORE_ENGINE || 'bookstore',
+    temporaryEngine = process.env.SWIFTYPE_TEST_TEMPORARY_ENGINE || 'temporary',
     apiKey = process.env.SWIFTYPE_TEST_API_KEY || 'a-test-api-key'
 
 describe('documentTypes', function() {
@@ -50,7 +51,7 @@ describe('documentTypes', function() {
   })
 
   it('destroys a document type', function(done) {
-    var documentType = 'books'
+    var documentType = 'magazines'
     client.documentTypes.destroy({
       engine: bookstoreEngine,
       documentType: documentType

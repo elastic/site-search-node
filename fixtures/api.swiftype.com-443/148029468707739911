@@ -1,0 +1,27 @@
+POST /api/v1/engines.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+accept: application/json
+content-type: application/json
+body: {\"engine\":{\"name\":\"temporary\"}}
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Mon, 28 Nov 2016 00:58:07 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"7c14425b3cfd5553ad0372659aade420"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: bbfb7ad7-1462-4734-9b0b-b4bfae7feb6f
+x-runtime: 0.365239
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+
+{"name":"temporary","slug":"temporary","key":"2aa2dCo3nxhxy8XAwU2d","id":"583b811ea1f2530340695ee8","_id":"583b811ea1f2530340695ee8","updated_at":"2016-11-28T00:58:06Z","document_count":0}

@@ -2,10 +2,14 @@ var assert = require('assert'),
     Swiftype = require('../lib/swiftype'),
     replay = require('replay')
 
+// Engines and keys fixtures
+var myEngine = process.env.SWIFTYPE_TEST_MY_ENGINE || 'my-engine',
+    bookstoreEngine = process.env.SWIFTYPE_TEST_BOOKSTORE_ENGINE || 'bookstore',
+    temporaryEngine = process.env.SWIFTYPE_TEST_TEMPORARY_ENGINE || 'temporary',
+    apiKey = process.env.SWIFTYPE_TEST_API_KEY || 'a-test-api-key'
+
 describe('documents', function() {
-  var apiKey = 'a-test-api-key',
-      client = new Swiftype({ apiKey: apiKey }),
-      engine = 'bookstore',
+  var client = new Swiftype({ apiKey: apiKey }),
       documentType = 'books'
 
   it('creates a document', function(done) {
@@ -19,7 +23,7 @@ describe('documents', function() {
     }
 
     client.documents.create({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       document: document
     }, function(err, res) {
@@ -36,7 +40,7 @@ describe('documents', function() {
     ]
 
     client.documents.bulkCreate({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       documents: documents
     }, function(err, res) {
@@ -68,7 +72,7 @@ describe('documents', function() {
     }
 
     var options = {
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
     }
 
@@ -83,7 +87,7 @@ describe('documents', function() {
 
   it('gets a document', function(done) {
     client.documents.get({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       externalId: '1'
     }, function(err, res) {
@@ -95,11 +99,11 @@ describe('documents', function() {
 
   it('gets all the documents', function(done) {
     client.documents.list({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType
     }, function(err, res) {
       assert(res)
-      assert.equal(1, res.length)
+      assert.equal(3, res.length)
       done()
     })
   })
@@ -108,7 +112,7 @@ describe('documents', function() {
     var field = { title: 'This Side of Paradise' }
 
     client.documents.update({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       externalId: '1',
       fields: field
@@ -121,7 +125,7 @@ describe('documents', function() {
 
   it('destroys a document', function(done) {
     client.documents.destroy({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       externalId: '1'
     }, function(err, res) {
@@ -132,7 +136,7 @@ describe('documents', function() {
 
   it('destroys multiple documents', function(done) {
     client.documents.bulkDestroy({
-      engine: engine,
+      engine: bookstoreEngine,
       documentType: documentType,
       documents: [ '3', '4' ]
     }, function(err, res) {

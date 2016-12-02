@@ -1,0 +1,27 @@
+POST /api/v1/engines/bookstore/document_types/books/documents/bulk_destroy.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+accept: application/json
+content-type: application/json
+body: {\"documents\":[\"3\",\"4\"]}
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Mon, 28 Nov 2016 00:58:04 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"bb009c6dcb5c622766ad5aa1ea1562d9"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: a4f5b4e8-eb83-475a-911f-269da27bb617
+x-runtime: 0.170880
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+
+[true,true]

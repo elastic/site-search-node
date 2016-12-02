@@ -1,0 +1,24 @@
+GET /api/v1/engines/bookstore/document_types/books/search.json?q=Gatsby
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Mon, 28 Nov 2016 00:57:57 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"5c5e47e10c35ec6fc9a7a6406476e4b0"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: a0489ea5-8a08-4c48-8f5f-81406d7180d1
+x-runtime: 0.097066
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+
+{"records":{"books":[]},"info":{"books":{"query":"Gatsby","current_page":1,"num_pages":1,"per_page":10,"total_result_count":0,"facets":{}}},"record_count":0,"errors":{}}

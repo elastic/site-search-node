@@ -1,22 +1,27 @@
 POST /api/v1/engines/bookstore/document_types/books/documents/bulk_create_or_update.json
 host: api.swiftype.com
-authorization: Basic YS10ZXN0LWFwaS1rZXk=
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
 accept: application/json
 content-type: application/json
 body: {\"documents\":[{\"external_id\":\"3\",\"fields\":[{\"name\":\"title\",\"value\":\"A Great Book\",\"type\":\"string\"}]},{\"external_id\":\"4\",\"fields\":[{\"name\":\"title\",\"value\":\"Another Great Book\",\"type\":\"string\"}]}]}
 
-200 HTTP/1.1
-server: openresty/1.5.11.1rc1
-date: Mon, 16 Jun 2014 22:40:21 GMT
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Mon, 28 Nov 2016 00:58:00 GMT
 content-type: application/json; charset=utf-8
 transfer-encoding: chunked
-connection: keep-alive
-vary: Accept-Encoding
+connection: close
+vary: Accept-Encoding, Accept-Encoding
 status: 200 OK
-x-ua-compatible: IE=Edge,chrome=1
-etag: "bb009c6dcb5c622766ad5aa1ea1562d9"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"bb009c6dcb5c622766ad5aa1ea1562d9"
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2eaafd4ed51ccf93d1eb1b9de438c49e
-x-runtime: 0.134463
+x-request-id: 5313a2db-5395-4cac-9641-9d788a556086
+x-runtime: 0.113101
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
 
 [true,true]

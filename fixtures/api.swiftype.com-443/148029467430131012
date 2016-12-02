@@ -1,0 +1,24 @@
+GET /api/v1/engines/bookstore/analytics/top_no_result_queries.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+server: openresty/1.7.10.2
+date: Mon, 28 Nov 2016 00:57:54 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"d751713988987e9331980363e24189ce"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: bbf6513f-1274-4158-a571-5ea30da60d13
+x-runtime: 0.073482
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+
+[]

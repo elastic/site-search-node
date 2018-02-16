@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/swiftype/swiftype-node.svg?branch=master)](https://travis-ci.org/swiftype/swiftype-node)
 
-> **Note:** This client has been developed for [Swiftype Site Search](https://www.swiftype.com/site-search) API endpoints only. You may refer to the [Swiftype Site Search API Documentation](https://swiftype.com/documentation/site-search/overview) for additional context.
+> **Note:** This client has been developed for the [Swiftype Site Search](https://www.swiftype.com/site-search) API endpoints only. You may refer to the [Swiftype Site Search API Documentation](https://swiftype.com/documentation/site-search/overview) for additional context.
 
 ## Installation
 

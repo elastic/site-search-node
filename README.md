@@ -1,4 +1,4 @@
-# Node.js Client for Swiftype Site Search
+# Node.js Client for Swiftype Site Search API
 
 [![Build Status](https://travis-ci.org/swiftype/swiftype-node.svg?branch=master)](https://travis-ci.org/swiftype/swiftype-node)
 

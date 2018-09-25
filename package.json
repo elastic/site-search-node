@@ -15,11 +15,11 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "request": "~2.79.0"
+    "request": "~2.88.0"
   },
   "devDependencies": {
-    "mocha": "~3.2.0",
-    "replay": "~2.1.2"
+    "mocha": "~5.2.0",
+    "replay": "~2.3.0"
   },
   "scripts": {
     "test": "mocha"

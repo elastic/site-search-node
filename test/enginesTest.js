@@ -20,7 +20,6 @@ describe('engines', function() {
   })
 
   it('gets an engine', function(done) {
-    var engine = 'my-engine'
     client.engines.get({engine: myEngine}, function(err, res) {
       assert(res)
       assert.equal(myEngine, res.slug)

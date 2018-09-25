@@ -18,7 +18,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-28', 0], res[0])
+      assert.deepEqual(['2018-09-25', 5], res[0])
       done()
     })
   })
@@ -42,7 +42,7 @@ describe('analytics', function() {
       documentType: documentType
     }, function(err, res) {
       assert(res)
-      assert.deepEqual(['2016-11-28', 0], res[0])
+      assert.deepEqual(['2018-09-25', 0], res[0])
       assert.equal(15, res.length)
       done()
     })
@@ -68,7 +68,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-28', 0], res[0])
+      assert.deepEqual(['2018-09-25', 0], res[0])
       done()
     })
   })
@@ -93,7 +93,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-28', 0], res[0])
+      assert.deepEqual(['2018-09-25', 0], res[0])
       done()
     })
   })
@@ -118,7 +118,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-28', 0], res[0])
+      assert.deepEqual(['2018-09-25', 0], res[0])
       done()
     })
   })
@@ -143,7 +143,7 @@ describe('analytics', function() {
     }, function(err, res) {
       assert(res)
       assert.equal(15, res.length)
-      assert.deepEqual(['2016-11-28', 0], res[0])
+      assert.deepEqual(['2018-09-25', 0], res[0])
       done()
     })
   })
@@ -167,7 +167,7 @@ describe('analytics', function() {
       engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
-      assert.equal(0, res.length)
+      assert.equal(1, res.length)
       done()
     })
   })
@@ -177,7 +177,19 @@ describe('analytics', function() {
       engine: bookstoreEngine
     }, function(err, res) {
       assert(res)
-      assert.equal(0, res.length)
+      assert.equal(1, res.length)
+      done()
+    })
+  })
+
+  it('logs the click event', function(done) {
+    client.click({
+      engine: myEngine,
+      q: 'awesome',
+      id: '5b886b63827a6656794c6eaf',
+      documentType: 'page'
+    }, function(err, res) {
+      assert.equal(null, err)
       done()
     })
   })

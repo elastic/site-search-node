@@ -1,0 +1,27 @@
+POST /api/v1/engines/my-engine/search.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+accept: application/json
+content-type: application/json
+body: {\"q\":\"awesome\"}
+
+HTTP/1.1 200 OK
+date: Tue, 25 Sep 2018 22:36:04 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"a467d0791265c500c1550256a58adb21"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 18365cc6ecbbbefb1d559183b5fb5395
+x-runtime: 0.148559
+x-swiftype-frontend-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-datacenter: dal05
+x-swiftype-edge-node: web01.dal05
+
+{"record_count":1,"records":{"page":[{"image":"https://ma.swiftypecdn.com/assets/new_marketing/views/customers/screenshots/asana-83641a1636e0bbde0b729d8899e0b58d.jpg","url":"https://swiftype.com/customers/knowledge-base-search-asana","sections":["Swiftype forAsana","Awesome guide, disappointing search","Empowering users","Identifying blind spots","Accessible for all users","Similar stories and\u00a0more"],"published_at":"2018-08-30T22:10:43Z","title":"Asana Case Study","updated_at":"2018-08-30T22:10:43Z","type":"","external_id":"721bb7d56da350c8b5947d4800e54298304352d9","popularity":1,"body":"Swiftype forAsana We\u2019ve found Swiftype to be a goldmine of analytics data\u2014seeing what people are searching for, finding, and not finding. We share these reports with the product team to illuminate user confusion and pain points, and we use the data to add support content and make product changes. \u2014 Asana marketing team Watch the testimonialDownload PDF About Asana Asana is a website and mobile app that helps teams collaborate by putting conversations and tasks together in one place, allowing users to get more done with less effort. Search for Swiftype powers search for the Asana Guide\u2014a comprehensive support portal that helps Asana users get the most out of the product. Why Swiftype? They needed strong search and in-depth analytics on customer behavior. Knowledge Base Search by\u00a0Swiftype Increase case-deflection and decrease your support burden with better search. Learn more Awesome guide, disappointing search From the start, Asana prided itself on high-quality customer service, but they wanted to find a way to scale without hiring a massive support team. To make this possible, Asana created an extremely detailed product guide and documentation center\u2014but users were having a hard time searching through all of its content. Empowering users After implementing Swiftype, Asana users were able to find their answers faster, which empowered users to educate themselves about the product and, according to Ryan Pittington, User Operations Lead, made it a \u201cbetter experience to use the Guide than to contact support.\u201d Identifying blind spots Ryan uses Swiftype analytics to make sure that users never run into dead ends on their support page. By checking his Swiftype dashboard, Ryan can see the top queries that return no results, prompting him to create content for those user issues or customize search results for those queries through the drag-and-drop results reordering interface\u2014a feature he described as \u201clike magic to me.\u201d Additionally, Asana has gained unexpected intel on their users by looking closely at their top queries, unearthing new ways that customers use their product. Accessible for all users In contrast to his experience with Google Analytics, Ryan found the Swiftype dashboard highly accessible and user-friendly\u2014so much so that many members of the operations team receive the weekly search analytics emails. These dashboard analytics and weekly emails serve as a constant reminder of the precise needs of Asana\u2019s users, allowing the team to continually expand their support content and efficiently resolve user issues. Similar stories and\u00a0more SurveyMonkey came to Swiftype for fast, customizable search across their multi-language self-service help center. Read the Case Study Shopify needed a powerful search engine to help their users dig through their extensive documentation easily. Read the Case Study","info":"","_index":"5b88662214cc8a6dc37f7a7e","_type":"5b88662214cc8a6dc37f7a7f","_score":41.613537,"_version":null,"_explanation":null,"sort":null,"highlight":{"sections":"<em>Awesome</em> guide, disappointing search","body":"\u2014a comprehensive support portal that helps Asana users get the most out of the product. Why Swiftype? They needed strong search and in-depth analytics on customer behavior. Knowledge Base Search by\u00a0Swiftype Increase case-deflection and decrease your support burden with better search. Learn more <em>Awesome</em>"},"id":"5b886b63827a6656794c6eaf"}]},"info":{"page":{"query":"awesome","current_page":1,"num_pages":1,"per_page":20,"total_result_count":1,"facets":{}}},"errors":{}}

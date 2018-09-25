@@ -1,0 +1,24 @@
+GET /api/v1/engines/bookstore/document_types.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+date: Tue, 25 Sep 2018 22:35:52 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"19ba475263f468ae9039db1cc54daed6"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 5bc8d1ccf26b1293267f703fa05b194d
+x-runtime: 0.082693
+x-swiftype-frontend-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-datacenter: dal05
+x-swiftype-edge-node: web01.dal05
+
+[{"id":"5b9ae305a1f25327ef3e59c7","name":"videos","slug":"videos","engine_id":"5b9ae305a1f25327ef3e59c6","updated_at":"2018-09-13T22:21:57Z","document_count":0,"field_mapping":{}},{"id":"5b9ae305a1f25327ef3e59c5","name":"books","slug":"books","engine_id":"5b9ae305a1f25327ef3e59c6","updated_at":"2018-09-13T22:22:45Z","document_count":3,"field_mapping":{"external_id":"enum","updated_at":"date","title":"string","author":"string","genre":"enum"}}]

@@ -1,0 +1,24 @@
+GET /api/v1/engines/bookstore/analytics/searches.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+date: Tue, 25 Sep 2018 22:35:42 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"40feb0526784f832a402ce4bde5b9f3c"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 92fea0dbd038fc6d6542da52f6bc7733
+x-runtime: 0.050611
+x-swiftype-frontend-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-datacenter: dal05
+x-swiftype-edge-node: web01.dal05
+
+[["2018-09-25",5],["2018-09-24",0],["2018-09-23",0],["2018-09-22",0],["2018-09-21",0],["2018-09-20",0],["2018-09-19",0],["2018-09-18",0],["2018-09-17",0],["2018-09-16",0],["2018-09-15",0],["2018-09-14",0],["2018-09-13",11],["2018-09-12",0],["2018-09-11",0]]

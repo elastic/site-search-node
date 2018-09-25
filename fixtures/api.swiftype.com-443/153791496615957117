@@ -1,0 +1,25 @@
+POST /api/v1/engines/my-engine/document_types/page/analytics/log_clickthrough.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+accept: application/json
+content-type: application/json
+body: {\"q\":\"awesome\",\"id\":\"5b886b63827a6656794c6eaf\"}
+
+HTTP/1.1 200 OK
+date: Tue, 25 Sep 2018 22:36:06 GMT
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+cache-control: no-cache
+x-request-id: cef0150bad89625d658ddde6d823a74b
+x-runtime: 0.125830
+x-swiftype-frontend-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-datacenter: dal05
+x-swiftype-edge-node: web01.dal05
+

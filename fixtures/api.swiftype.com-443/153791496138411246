@@ -1,0 +1,24 @@
+GET /api/v1/engines.json
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 200 OK
+date: Tue, 25 Sep 2018 22:36:01 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+vary: Accept-Encoding, Accept-Encoding
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+etag: W/"639f32cfe2fe5ec5f6efd2c553078ce0"
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 19e6921234dfd7ce4bf8ed0f502ebe48
+x-runtime: 0.125530
+x-swiftype-frontend-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-datacenter: dal05
+x-swiftype-edge-node: web01.dal05
+
+[{"name":"Swiftype","slug":"swiftype","key":"SYDq_VGW56-DS91RsMvK","id":"5b88662214cc8a6dc37f7a7e","_id":"5b88662214cc8a6dc37f7a7e","updated_at":"2018-08-30T22:29:53Z","document_count":219,"language":null},{"name":"Bookstore","slug":"bookstore","key":"G8QAxLtfPXikJhLwktJV","id":"5b9ae305a1f25327ef3e59c6","_id":"5b9ae305a1f25327ef3e59c6","updated_at":"2018-09-13T23:32:48Z","document_count":3,"language":"en"}]

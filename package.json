@@ -11,7 +11,7 @@
     "url": "git@github.com:swiftype/swiftype-node.git"
   },
   "engines": {
-    "node": ">= v0.8.0"
+    "node": ">= v4.0"
   },
   "dependencies": {
     "async": "^2.1.4",

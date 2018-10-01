@@ -1,0 +1,20 @@
+DELETE /api/v1/engines/temporary
+accept: */*
+host: api.swiftype.com
+authorization: Basic YS10ZXN0LWFwaS1rZXk6
+
+HTTP/1.1 204 No Content
+server: openresty/1.7.10.2
+date: Mon, 28 Nov 2016 00:58:07 GMT
+connection: close
+status: 204 No Content
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+cache-control: no-cache
+x-request-id: fb9ba188-4e1a-49dc-852e-aad9dfd9fb0f
+x-runtime: 0.242765
+x-swiftype-datacenter: dal05
+x-swiftype-frontend-node: web01.dal05
+x-swiftype-edge-node: web01.dal05
+

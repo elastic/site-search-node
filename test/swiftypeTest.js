@@ -23,7 +23,7 @@ describe('swiftype', function() {
     it('searches an engine', function(done) {
       client.search({engine: myEngine, q: 'awesome'}, function(err, res) {
         assert(res)
-        assert.equal('Asana Case Study', res.records.page[0].title)
+        assert.equal('Asana Case Study | Swiftype', res.records.page[0].title)
         done()
       })
     })
@@ -35,7 +35,7 @@ describe('swiftype', function() {
     it('autocompletes on an engine', function(done) {
       client.suggest({engine: myEngine, q: 'awe'}, function(err, res) {
         assert(res)
-        assert.equal('Asana Case Study', res.records.page[0].title)
+        assert.equal('Asana Case Study | Swiftype', res.records.page[0].title)
         done()
       })
     })
@@ -52,6 +52,7 @@ describe('swiftype', function() {
         documentType: 'page'
       }, function(err, res) {
         assert.equal(null, err)
+        assert.equal(undefined, res)
         done()
       })
     })

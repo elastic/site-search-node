@@ -44,9 +44,9 @@ Search for `cats` on the engine `my-engine` with filters and facets:
       console.log(res)
     })
 
-### Suggest
+### Autocomplete
 
-Suggest for `cat` on the engine `my-engine` with filters:
+Autocomplete suggestion for `cat` on the engine `my-engine` with filters:
 
     swiftype.suggest({
       engine: 'my-engine',

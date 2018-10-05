@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "mocha": "~5.2.0",
-    "replay": "~2.3.0"
+    "replay": "~2.1.2"
   },
   "scripts": {
     "test": "mocha"

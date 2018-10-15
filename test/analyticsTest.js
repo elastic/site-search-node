@@ -181,4 +181,17 @@ describe('analytics', function() {
       done()
     })
   })
+
+  it('logs the click event', function(done) {
+    client.click({
+      engine: myEngine,
+      q: 'awesome',
+      id: '5b886b63827a6656794c6eaf',
+      documentType: 'page'
+    }, function(err, res) {
+      assert.equal(null, err)
+      assert.equal(undefined, res)
+      done()
+    })
+  })
 })

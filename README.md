@@ -46,7 +46,7 @@ Search for `cats` on the engine `my-engine` with filters and facets:
 
 ### Autocomplete
 
-Autocomplete for `cat` on the engine `my-engine` with filters:
+Autocomplete suggestion for `cat` on the engine `my-engine` with filters:
 
     swiftype.suggest({
       engine: 'my-engine',
@@ -56,6 +56,19 @@ Autocomplete for `cat` on the engine `my-engine` with filters:
           'enumField': 'theFilter'
         }
       }
+    }, function(err, res) {
+      console.log(res)
+    })
+
+### Click
+
+Log clickthrough for `cat` on the engine `my-engine` for the documentType `page`:
+
+    swiftype.click({
+      engine: 'my-engine',
+      q: 'cat',
+      id: 'the-document-id',
+      documentType: 'page'
     }, function(err, res) {
       console.log(res)
     })
@@ -129,3 +142,4 @@ The tests can also use environment variables so that you can create new replays 
 * SWIFTYPE_TEST_BOOKSTORE_ENGINE = the slug for your 'bookstore' in the tests
 * SWIFTYPE_TEST_TEMPORARY_ENGINE = the slug for your 'temporary' in the tests
 * SWIFTYPE_TEST_API_KEY = your api key in the tests
+* REPLAY = 'record' to record new replay files

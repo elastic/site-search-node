@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/swiftype/swiftype-node/blob/master/logo-app-search.png?raw=true" alt="Elastic Site Search Logo"></p>
+<p align="center"><img src="https://github.com/swiftype/swiftype-node/blob/master/logo-site-search.png?raw=true" alt="Elastic Site Search Logo"></p>
 
 <p align="center"><a href="https://travis-ci.org/swiftype/swiftype-node"><img src="https://travis-ci.org/swiftype/swiftype-node.svg?branch=master" alt="Travis build"></a>
 <a href="https://github.com/swiftype/swiftype-node/releases"><img src="https://img.shields.io/github/release/swiftype/swiftype-node/all.svg?style=flat-square" alt="GitHub release" /></a></p>

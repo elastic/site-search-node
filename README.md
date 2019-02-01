@@ -1,7 +1,7 @@
-<p align="center"><img src="https://github.com/swiftype/swiftype-rb/blob/master/logo-app-search.png?raw=true" alt="Elastic Site Search Logo"></p>
+<p align="center"><img src="https://github.com/swiftype/swiftype-node/blob/master/logo-app-search.png?raw=true" alt="Elastic Site Search Logo"></p>
 
 <p align="center"><a href="https://travis-ci.org/swiftype/swiftype-node"><img src="https://travis-ci.org/swiftype/swiftype-node.svg?branch=master" alt="Travis build"></a>
-<a href="https://github.com/swiftype/swiftype-rb/releases"><img src="https://img.shields.io/github/release/swiftype/swiftype-rb/all.svg?style=flat-square" alt="GitHub release" /></a></p>
+<a href="https://github.com/swiftype/swiftype-node/releases"><img src="https://img.shields.io/github/release/swiftype/swiftype-node/all.svg?style=flat-square" alt="GitHub release" /></a></p>
 
 > A first-party Node client for the [Elastic Site Search API](https://swiftype.com/documentation/site-search/overview).
 
@@ -161,7 +161,7 @@ The tests can also use environment variables so that you can create new replays 
 
 ### Where do I report issues with the client?
 
-If something is not working as expected, please open an [issue](https://github.com/swiftype/swiftype-rb/issues/new).
+If something is not working as expected, please open an [issue](https://github.com/swiftype/swiftype-node/issues/new).
 
 ### Where can I learn more about App Search?
 
@@ -175,11 +175,11 @@ You can checkout the [Elastic Site Search community discuss forums](https://disc
 
 We welcome contributors to the project. Before you begin, a couple notes...
 
-+ Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/swiftype/swiftype-rb/issues).
++ Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/swiftype/swiftype-node/issues).
 + Please write simple code and concise documentation, when appropriate.
 
 ## License 📗
 
-[MIT](https://github.com/swiftype/swiftype-rb/blob/master/LICENSE) © [Elastic](https://github.com/elastic)
+[MIT](https://github.com/swiftype/swiftype-node/blob/master/LICENSE) © [Elastic](https://github.com/elastic)
 
-Thank you to all the [contributors](https://github.com/swiftype/swiftype-rb/graphs/contributors)!
+Thank you to all the [contributors](https://github.com/swiftype/swiftype-node/graphs/contributors)!

@@ -9,7 +9,7 @@
 
 + [Getting started](#getting-started-)
 + [Usage](#content)
-+ [Tests](#tests)
++ [Running tests](#running-tests)
 + [FAQ](#faq-)
 + [Contribute](#contribute-)
 + [License](#license-)
@@ -143,7 +143,7 @@ Fetch the document type `books` in the engine `my-engine`
 
 Check out the tests for more examples!
 
-## Tests
+## Running tests
 
     $ npm test
 

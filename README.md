@@ -1,10 +1,23 @@
-# Node.js Client for Swiftype Site Search API
+<p align="center"><img src="https://github.com/swiftype/swiftype-rb/blob/master/logo-app-search.png?raw=true" alt="Elastic Site Search Logo"></p>
 
-[![Build Status](https://travis-ci.org/swiftype/swiftype-node.svg?branch=master)](https://travis-ci.org/swiftype/swiftype-node)
+<p align="center"><a href="https://travis-ci.org/swiftype/swiftype-node"><img src="https://travis-ci.org/swiftype/swiftype-node.svg?branch=master" alt="Travis build"></a>
+<a href="https://github.com/swiftype/swiftype-rb/releases"><img src="https://img.shields.io/github/release/swiftype/swiftype-rb/all.svg?style=flat-square" alt="GitHub release" /></a></p>
 
-> **Note:** This client has been developed for the [Swiftype Site Search](https://www.swiftype.com/site-search) API endpoints only. You may refer to the [Swiftype Site Search API Documentation](https://swiftype.com/documentation/site-search/overview) for additional context.
+> A first-party Node client for the [Elastic Site Search API](https://swiftype.com/documentation/site-search/overview).
 
-## Installation
+## Contents
+
++ [Getting started](#getting-started-)
++ [Usage](#content)
++ [Tests](#tests)
++ [FAQ](#faq-)
++ [Contribute](#contribute-)
++ [License](#license-)
+
+***
+
+## Getting started 🐣
+
 
 With npm:
 
@@ -16,7 +29,7 @@ or clone locally:
     $ cd swiftype-node
     $ npm install
 
-## Examples
+## Usage
 
 Create a new instance of the client with your api key:
 
@@ -143,3 +156,30 @@ The tests can also use environment variables so that you can create new replays 
 * SWIFTYPE_TEST_TEMPORARY_ENGINE = the slug for your 'temporary' in the tests
 * SWIFTYPE_TEST_API_KEY = your api key in the tests
 * REPLAY = 'record' to record new replay files
+
+## FAQ 🔮
+
+### Where do I report issues with the client?
+
+If something is not working as expected, please open an [issue](https://github.com/swiftype/swiftype-rb/issues/new).
+
+### Where can I learn more about App Search?
+
+Your best bet is to read the [documentation](https://swiftype.com/documentation/app-search).
+
+### Where else can I go to get help?
+
+You can checkout the [Elastic Site Search community discuss forums](https://discuss.elastic.co/c/site-search).
+
+## Contribute 🚀
+
+We welcome contributors to the project. Before you begin, a couple notes...
+
++ Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/swiftype/swiftype-rb/issues).
++ Please write simple code and concise documentation, when appropriate.
+
+## License 📗
+
+[MIT](https://github.com/swiftype/swiftype-rb/blob/master/LICENSE) © [Elastic](https://github.com/elastic)
+
+Thank you to all the [contributors](https://github.com/swiftype/swiftype-rb/graphs/contributors)!

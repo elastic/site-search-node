@@ -8,7 +8,7 @@
 ## Contents
 
 + [Getting started](#getting-started-)
-+ [Usage](#content)
++ [Usage](#usage)
 + [Running tests](#running-tests)
 + [FAQ](#faq-)
 + [Contribute](#contribute-)

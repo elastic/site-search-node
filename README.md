@@ -141,6 +141,15 @@ Fetch the document type `books` in the engine `my-engine`
       console.log(res)
     })
 
+Create the document type `books` in the engine `my-engine`
+
+    swiftype.documentTypes.create({
+      engine: 'my-engine',
+      document_type: { name: 'books' }
+    }, function(err, res) {
+      console.log(res)
+    })
+
 Check out the tests for more examples!
 
 ## Running tests

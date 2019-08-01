@@ -1,14 +1,14 @@
 {
-  "name": "swiftype",
+  "name": "@elastic/site-search-node",
   "version": "0.4.0",
-  "description": "Swiftype API client",
-  "homepage": "https://github.com/swiftype/swiftype-node",
-  "main": "lib/swiftype.js",
+  "description": "Elastic Site Search API client",
+  "homepage": "https://github.com/elastic/site-search-node",
+  "main": "lib/siteSearch.js",
   "author": "Mike Chlipala",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:swiftype/swiftype-node.git"
+    "url": "git@github.com:elastic/site-search-node.git"
   },
   "engines": {
     "node": ">= v4.0"

@@ -1,7 +1,6 @@
-<p align="center"><img src="https://github.com/swiftype/swiftype-node/blob/master/logo-site-search.png?raw=true" alt="Elastic Site Search Logo"></p>
+<p align="center"><img src="https://github.com/elastic/site-search-node/blob/master/logo-site-search.png?raw=true" alt="Elastic Site Search Logo"></p>
 
-<p align="center"><a href="https://travis-ci.org/swiftype/swiftype-node"><img src="https://travis-ci.org/swiftype/swiftype-node.svg?branch=master" alt="Travis build"></a>
-<a href="https://github.com/swiftype/swiftype-node/releases"><img src="https://img.shields.io/github/release/swiftype/swiftype-node/all.svg?style=flat-square" alt="GitHub release" /></a></p>
+<p align="center"><a href="https://travis-ci.org/swiftype/swiftype-node"><img src="https://travis-ci.org/swiftype/swiftype-node.svg?branch=master" alt="Travis build"></a></p>
 
 > A first-party Node client for the [Elastic Site Search API](https://swiftype.com/documentation/site-search/overview).
 
@@ -21,20 +20,20 @@
 
 With npm:
 
-    npm install swiftype
+    npm install @elastic/site-search-node
 
 or clone locally:
 
-    $ git clone git@github.com:swiftype/swiftype-node.git
-    $ cd swiftype-node
+    $ git clone git@github.com:elastic/site-search-node.git
+    $ cd site-search-node
     $ npm install
 
 ## Usage
 
 Create a new instance of the client with your api key:
 
-    var SwiftypeApi = require('swiftype')
-    var swiftype = new SwiftypeApi({
+    var SiteSearchClient = require('@elastic/site-search-node')
+    var client = new SiteSearchClient({
       apiKey: 'yourApiKey'
     })
 
@@ -42,7 +41,7 @@ Create a new instance of the client with your api key:
 
 Search for `cats` on the engine `my-engine` with filters and facets:
 
-    swiftype.search({
+    client.search({
       engine: 'my-engine',
       q: 'cats',
       filters: {
@@ -61,7 +60,7 @@ Search for `cats` on the engine `my-engine` with filters and facets:
 
 Autocomplete suggestion for `cat` on the engine `my-engine` with filters:
 
-    swiftype.suggest({
+    client.suggest({
       engine: 'my-engine',
       q: 'cat',
       filters: {
@@ -77,7 +76,7 @@ Autocomplete suggestion for `cat` on the engine `my-engine` with filters:
 
 Log clickthrough for `cat` on the engine `my-engine` for the documentType `page`:
 
-    swiftype.click({
+    client.click({
       engine: 'my-engine',
       q: 'cat',
       id: 'the-document-id',
@@ -90,7 +89,7 @@ Log clickthrough for `cat` on the engine `my-engine` for the documentType `page`
 
 Create a new document:
 
-    swiftype.documents.create({
+    client.documents.create({
       engine: 'my-engine',
       documentType: 'books',
       document: {
@@ -110,13 +109,13 @@ Create a new document:
 
 Fetch all of your engines:
 
-    swiftype.engines.list(function(err, res) {
+    client.engines.list(function(err, res) {
       console.log(res)
     })
 
 Fetch a single engine:
 
-    swiftype.engines.get({
+    client.engines.get({
       engine: 'my-engine'
     }, function(err, res) {
       console.log(res)
@@ -126,7 +125,7 @@ Fetch a single engine:
 
 Fetch all of the document types in the engine `my-engine`
 
-    swiftype.documentTypes.list({
+    client.documentTypes.list({
       engine: 'my-engine'
     }, function(err, res) {
       console.log(res)
@@ -134,7 +133,7 @@ Fetch all of the document types in the engine `my-engine`
 
 Fetch the document type `books` in the engine `my-engine`
 
-    swiftype.documentTypes.get({
+    client.documentTypes.get({
       engine: 'my-engine',
       documentType: 'books'
     }, function(err, res) {
@@ -143,7 +142,7 @@ Fetch the document type `books` in the engine `my-engine`
 
 Create the document type `books` in the engine `my-engine`
 
-    swiftype.documentTypes.create({
+    client.documentTypes.create({
       engine: 'my-engine',
       document_type: { name: 'books' }
     }, function(err, res) {
@@ -160,17 +159,17 @@ The tests use stubbed HTTP interactions that are recorded with the [node-replay]
 
 The tests can also use environment variables so that you can create new replays against your own account. Don't forget to change the "authorization" header in the replay files to not give away your api key.
 
-* SWIFTYPE_TEST_MY_ENGINE = the slug for your 'my-engine' in the tests
-* SWIFTYPE_TEST_BOOKSTORE_ENGINE = the slug for your 'bookstore' in the tests
-* SWIFTYPE_TEST_TEMPORARY_ENGINE = the slug for your 'temporary' in the tests
-* SWIFTYPE_TEST_API_KEY = your api key in the tests
+* SITE_SEARCH_TEST_MY_ENGINE = the slug for your 'my-engine' in the tests
+* SITE_SEARCH_TEST_BOOKSTORE_ENGINE = the slug for your 'bookstore' in the tests
+* SITE_SEARCH_TEST_TEMPORARY_ENGINE = the slug for your 'temporary' in the tests
+* SITE_SEARCH_TEST_API_KEY = your api key in the tests
 * REPLAY = 'record' to record new replay files
 
 ## FAQ 🔮
 
 ### Where do I report issues with the client?
 
-If something is not working as expected, please open an [issue](https://github.com/swiftype/swiftype-node/issues/new).
+If something is not working as expected, please open an [issue](https://github.com/elastic/site-search-node/issues/new).
 
 ### Where can I learn more about Site Search?
 
@@ -184,11 +183,11 @@ You can checkout the [Elastic Site Search community discuss forums](https://disc
 
 We welcome contributors to the project. Before you begin, a couple notes...
 
-+ Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/swiftype/swiftype-node/issues).
++ Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/elastic/site-search-node/issues).
 + Please write simple code and concise documentation, when appropriate.
 
 ## License 📗
 
-[MIT](https://github.com/swiftype/swiftype-node/blob/master/LICENSE) © [Elastic](https://github.com/elastic)
+[Apache 2.0](https://github.com/elastic/site-search-node/blob/master/LICENSE.txt) © [Elastic](https://github.com/elastic)
 
-Thank you to all the [contributors](https://github.com/swiftype/swiftype-node/graphs/contributors)!
+Thank you to all the [contributors](https://github.com/elastic/site-search-node/graphs/contributors)!

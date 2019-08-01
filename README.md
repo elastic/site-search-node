@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/elastic/site-search-node/blob/master/logo-site-search.png?raw=true" alt="Elastic Site Search Logo"></p>
 
-<p align="center"><a href="https://travis-ci.org/swiftype/swiftype-node"><img src="https://travis-ci.org/swiftype/swiftype-node.svg?branch=master" alt="Travis build"></a></p>
+<p align="center"><a href="https://circleci.com/gh/elastic/site-search-node"><img src="https://circleci.com/gh/elastic/site-search-node.svg?style=svg" alt="CircleCI build"></a></p>
 
 > A first-party Node client for the [Elastic Site Search API](https://swiftype.com/documentation/site-search/overview).
 

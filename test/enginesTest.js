@@ -1,15 +1,15 @@
 var assert = require('assert'),
-    Swiftype = require('../lib/swiftype'),
+    SiteSearchClient = require('../lib/siteSearch'),
     replay = require('replay')
 
 // Engines and keys fixtures
-var myEngine = process.env.SWIFTYPE_TEST_MY_ENGINE || 'my-engine',
-    bookstoreEngine = process.env.SWIFTYPE_TEST_BOOKSTORE_ENGINE || 'bookstore',
-    temporaryEngine = process.env.SWIFTYPE_TEST_TEMPORARY_ENGINE || 'temporary',
-    apiKey = process.env.SWIFTYPE_TEST_API_KEY || 'a-test-api-key'
+var myEngine = process.env.SITE_SEARCH_TEST_MY_ENGINE || 'my-engine',
+    bookstoreEngine = process.env.SITE_SEARCH_TEST_BOOKSTORE_ENGINE || 'bookstore',
+    temporaryEngine = process.env.SITE_SEARCH_TEST_TEMPORARY_ENGINE || 'temporary',
+    apiKey = process.env.SITE_SEARCH_TEST_API_KEY || 'a-test-api-key'
 
 describe('engines', function() {
-  var client = new Swiftype({ apiKey: apiKey })
+  var client = new SiteSearchClient({ apiKey: apiKey })
 
   it('gets the engines', function(done) {
     client.engines.list(function(err, res) {

@@ -6,6 +6,8 @@
 
 ## Contents
 
+Test
+
 + [Getting started](#getting-started-)
 + [Usage](#usage)
 + [Running tests](#running-tests)

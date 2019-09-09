@@ -6,164 +6,212 @@
 
 ## Contents
 
-+ [Getting started](#getting-started-)
-+ [Usage](#usage)
-+ [Running tests](#running-tests)
-+ [FAQ](#faq-)
-+ [Contribute](#contribute-)
-+ [License](#license-)
+- [Getting started](#getting-started-)
+- [Usage](#usage)
+- [Running tests](#running-tests)
+- [FAQ](#faq-)
+- [Contribute](#contribute-)
+- [License](#license-)
 
-***
+---
 
 ## Getting started 🐣
 
-
 With npm:
 
-    npm install @elastic/site-search-node
+```shell
+npm install @elastic/site-search-node
+```
 
 or clone locally:
 
-    $ git clone git@github.com:elastic/site-search-node.git
-    $ cd site-search-node
-    $ npm install
+```shell
+$ git clone git@github.com:elastic/site-search-node.git
+$ cd site-search-node
+$ npm install
+```
 
 ## Usage
 
 Create a new instance of the client with your api key:
 
-    var SiteSearchClient = require('@elastic/site-search-node')
-    var client = new SiteSearchClient({
-      apiKey: 'yourApiKey'
-    })
+```javascript
+var SiteSearchClient = require("@elastic/site-search-node");
+var client = new SiteSearchClient({
+  apiKey: "yourApiKey"
+});
+```
 
 ### Searching
 
 Search for `cats` on the engine `my-engine` with filters and facets:
 
-    client.search({
-      engine: 'my-engine',
-      q: 'cats',
-      filters: {
-        page: {
-          'enumField': 'theFilter'
-        }
-      },
-      facets: {
-        page: ['enumField', 'anotherField']
+```javascript
+client.search(
+  {
+    engine: "my-engine",
+    q: "cats",
+    filters: {
+      page: {
+        enumField: "theFilter"
       }
-    }, function(err, res) {
-      console.log(res)
-    })
+    },
+    facets: {
+      page: ["enumField", "anotherField"]
+    }
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 ### Autocomplete
 
 Autocomplete suggestion for `cat` on the engine `my-engine` with filters:
 
-    client.suggest({
-      engine: 'my-engine',
-      q: 'cat',
-      filters: {
-        page: {
-          'enumField': 'theFilter'
-        }
+```javascript
+client.suggest(
+  {
+    engine: "my-engine",
+    q: "cat",
+    filters: {
+      page: {
+        enumField: "theFilter"
       }
-    }, function(err, res) {
-      console.log(res)
-    })
+    }
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 ### Click
 
 Log clickthrough for `cat` on the engine `my-engine` for the documentType `page`:
 
-    client.click({
-      engine: 'my-engine',
-      q: 'cat',
-      id: 'the-document-id',
-      documentType: 'page'
-    }, function(err, res) {
-      console.log(res)
-    })
+```javascript
+client.click(
+  {
+    engine: "my-engine",
+    q: "cat",
+    id: "the-document-id",
+    documentType: "page"
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 ### Documents
 
 Create a new document:
 
-    client.documents.create({
-      engine: 'my-engine',
-      documentType: 'books',
-      document: {
-        external_id: '1',
-        fields: [
-          { name: 'title', value: 'The Great Gatsby', type: 'string' },
-          { name: 'author', value: 'F. Scott Fitzgerald', type: 'string' },
-          { name: 'genre', value: 'fiction', type: 'enum' }
-        ]
-      }
-    }, function(err, res) {
-      console.log(res)
-    })
-
+```javascript
+client.documents.create(
+  {
+    engine: "my-engine",
+    documentType: "books",
+    document: {
+      external_id: "1",
+      fields: [
+        { name: "title", value: "The Great Gatsby", type: "string" },
+        { name: "author", value: "F. Scott Fitzgerald", type: "string" },
+        { name: "genre", value: "fiction", type: "enum" }
+      ]
+    }
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 ### Engines
 
 Fetch all of your engines:
 
-    client.engines.list(function(err, res) {
-      console.log(res)
-    })
+```javascript
+client.engines.list(function(err, res) {
+  console.log(res);
+});
+```
 
 Fetch a single engine:
 
-    client.engines.get({
-      engine: 'my-engine'
-    }, function(err, res) {
-      console.log(res)
-    })
+```javascript
+client.engines.get(
+  {
+    engine: "my-engine"
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 ### Document Types
 
 Fetch all of the document types in the engine `my-engine`
 
-    client.documentTypes.list({
-      engine: 'my-engine'
-    }, function(err, res) {
-      console.log(res)
-    })
+```javascript
+client.documentTypes.list(
+  {
+    engine: "my-engine"
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 Fetch the document type `books` in the engine `my-engine`
 
-    client.documentTypes.get({
-      engine: 'my-engine',
-      documentType: 'books'
-    }, function(err, res) {
-      console.log(res)
-    })
+```javascript
+client.documentTypes.get(
+  {
+    engine: "my-engine",
+    documentType: "books"
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 Create the document type `books` in the engine `my-engine`
 
-    client.documentTypes.create({
-      engine: 'my-engine',
-      document_type: { name: 'books' }
-    }, function(err, res) {
-      console.log(res)
-    })
+```javascript
+client.documentTypes.create(
+  {
+    engine: "my-engine",
+    document_type: { name: "books" }
+  },
+  function(err, res) {
+    console.log(res);
+  }
+);
+```
 
 Check out the tests for more examples!
 
 ## Running tests
 
-    $ npm test
+```shell
+$ npm test
+```
 
 The tests use stubbed HTTP interactions that are recorded with the [node-replay](https://github.com/assaf/node-replay) module. By default, HTTP interactions are not allowed when running the tests.
 
 The tests can also use environment variables so that you can create new replays against your own account. Don't forget to change the "authorization" header in the replay files to not give away your api key.
 
-* SITE_SEARCH_TEST_MY_ENGINE = the slug for your 'my-engine' in the tests
-* SITE_SEARCH_TEST_BOOKSTORE_ENGINE = the slug for your 'bookstore' in the tests
-* SITE_SEARCH_TEST_TEMPORARY_ENGINE = the slug for your 'temporary' in the tests
-* SITE_SEARCH_TEST_API_KEY = your api key in the tests
-* REPLAY = 'record' to record new replay files
+- SITE_SEARCH_TEST_MY_ENGINE = the slug for your 'my-engine' in the tests
+- SITE_SEARCH_TEST_BOOKSTORE_ENGINE = the slug for your 'bookstore' in the tests
+- SITE_SEARCH_TEST_TEMPORARY_ENGINE = the slug for your 'temporary' in the tests
+- SITE_SEARCH_TEST_API_KEY = your api key in the tests
+- REPLAY = 'record' to record new replay files
 
 ## FAQ 🔮
 
@@ -183,8 +231,8 @@ You can checkout the [Elastic Site Search community discuss forums](https://disc
 
 We welcome contributors to the project. Before you begin, a couple notes...
 
-+ Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/elastic/site-search-node/issues).
-+ Please write simple code and concise documentation, when appropriate.
+- Before opening a pull request, please create an issue to [discuss the scope of your proposal](https://github.com/elastic/site-search-node/issues).
+- Please write simple code and concise documentation, when appropriate.
 
 ## License 📗
 

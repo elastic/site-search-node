@@ -1,6 +1,6 @@
 {
   "name": "@elastic/site-search-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Elastic Site Search API client for Node.js",
   "homepage": "https://github.com/elastic/site-search-node",
   "main": "lib/siteSearch.js",

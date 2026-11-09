@@ -1,7 +1,12 @@
-## Closes #XYZ
+## Issue: https://github.com/elastic/REPO/issues/NUMBER
+
+<!-- REPLACE THE LINE ABOVE with the full URL of the issue this PR solves,
+for example https://github.com/elastic/some-repo/issues/123.
+Always use the full URL, not just `#123`, so the link resolves even when the
+issue lives in another repository. Do not merge this PR with the placeholder
+URL still in place. -->
 
 <!-- Provide a general description of the code changes in your pull request.
-If the change relates to a specific issue, include the link at the top.
 
 If this is an ad-hoc/trivial change and does not have a corresponding
 issue, please describe your changes in enough detail, so that reviewers

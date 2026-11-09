@@ -1,6 +1,6 @@
-## Issue: https://github.com/elastic/REPO/issues/NUMBER
+## Closes https://github.com/elastic/REPO/issues/NUMBER
 
-<!-- REPLACE THE LINE ABOVE with the full URL of the issue this PR solves,
+<!-- REPLACE THE LINE ABOVE with the full URL of the issue this PR solves. Keep the word `Closes`: GitHub then closes the issue when the PR is merged into the default branch,
 for example https://github.com/elastic/some-repo/issues/123.
 Always use the full URL, not just `#123`, so the link resolves even when the
 issue lives in another repository. Do not merge this PR with the placeholder

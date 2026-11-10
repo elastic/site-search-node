@@ -10,11 +10,13 @@ permissions:
 
 jobs:
   test:
-    name: Tests with yarn on Node ${{ matrix.node-version }}
-    runs-on: ubuntu-latest
+    name: Tests with yarn on Node ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        # explicit versions, ubuntu-latest is moving from 24.04 to 26.04
+        os: [ubuntu-22.04, ubuntu-24.04, ubuntu-26.04]
         node-version: [18, 20, 22]
     steps:
       - uses: actions/checkout@v4

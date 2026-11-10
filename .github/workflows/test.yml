@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests with yarn on Node ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # explicit versions, ubuntu-latest is moving from 24.04 to 26.04
+        os: [ubuntu-22.04, ubuntu-24.04, ubuntu-26.04]
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      # yarn (not npm) so the "resolutions" pins in package.json are applied
+      - run: yarn install
+      - run: yarn test
